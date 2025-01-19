@@ -8,3 +8,5 @@
 *Proje yapımında Visual Studio 2022, c# dili ve SDK 8 kullanılmıştır.
 
 **Projeyi çalıştırmak için GitHub'dan klonladıktan sonra gerekli NuGet paketlerini yükleyip, appsettings.json dosyasındaki DefaultConnection bağlantısını SQL Server bilgilerinize göre düzenleyin. Migration ekleyip, Database'i update edin.
+
+***Programın, Chrome tarayıcıda bağlantı hatası vermesi durumunda https yerine http kullanabilir veya başka bir tarayıcı kullanabilirsiniz.
