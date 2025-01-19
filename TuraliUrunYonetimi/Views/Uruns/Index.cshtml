@@ -1,0 +1,54 @@
+﻿@model IEnumerable<TuraliUrunYonetimi.Models.Urun>
+
+@{
+    ViewData["Title"] = "Ürün Yönetimi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Ürün Listesi</h1>
+
+<p>
+    <a asp-action="Create">Create</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UrunId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UrunAdi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fiyat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StokMiktari)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UrunId)
+            <td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UrunAdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fiyat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StokMiktari)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.UrunId">Update</a> |
+                <a asp-action="Details" asp-route-id="@item.UrunId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.UrunId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
